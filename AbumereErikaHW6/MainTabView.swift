@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct MainTabView: View {
-    @EnvironmentObject var flashcardViewModel: FlashcardViewModel
+    //@EnvironmentObject var flashcardViewModel: FlashcardViewModel
 
     var body: some View {
         TabView{
@@ -26,7 +26,7 @@ struct MainTabView: View {
                     Label("Favorites", systemImage: "star.fill")
                 }
         }
-        .environmentObject(flashcardViewModel)
+        .environmentObject(FlashcardViewModel())
         
     }
 }

@@ -140,6 +140,7 @@ struct FlashcardPage: View {
             .onAppear{
                 //randomize first card
                 flashcardViewModel.randomize()
+                fav = isFavorite
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
