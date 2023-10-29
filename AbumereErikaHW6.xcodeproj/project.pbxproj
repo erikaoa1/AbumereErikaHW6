@@ -20,6 +20,7 @@
 		3F50BB7B2AEE01A90059DE62 /* EditFlashCardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB7A2AEE01A90059DE62 /* EditFlashCardPage.swift */; };
 		3F50BB7D2AEE047D0059DE62 /* FlashcardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB7C2AEE047D0059DE62 /* FlashcardCell.swift */; };
 		3F50BB7F2AEE054A0059DE62 /* FlashcardListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB7E2AEE054A0059DE62 /* FlashcardListPage.swift */; };
+		3F50BB812AEE19710059DE62 /* FavoritesFlashcardListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB802AEE19710059DE62 /* FavoritesFlashcardListPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		3F50BB7A2AEE01A90059DE62 /* EditFlashCardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlashCardPage.swift; sourceTree = "<group>"; };
 		3F50BB7C2AEE047D0059DE62 /* FlashcardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardCell.swift; sourceTree = "<group>"; };
 		3F50BB7E2AEE054A0059DE62 /* FlashcardListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListPage.swift; sourceTree = "<group>"; };
+		3F50BB802AEE19710059DE62 /* FavoritesFlashcardListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesFlashcardListPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				3F50BB742AEE00850059DE62 /* FlashcardsModel.swift */,
 				3F50BB722AEE007A0059DE62 /* FlashcardViewModel.swift */,
 				3F50BB7E2AEE054A0059DE62 /* FlashcardListPage.swift */,
+				3F50BB802AEE19710059DE62 /* FavoritesFlashcardListPage.swift */,
 				3F50BB7A2AEE01A90059DE62 /* EditFlashCardPage.swift */,
 				3F50BB7C2AEE047D0059DE62 /* FlashcardCell.swift */,
 				3F50BAD62AEB92570059DE62 /* Assets.xcassets */,
@@ -283,6 +286,7 @@
 				3F50BB7B2AEE01A90059DE62 /* EditFlashCardPage.swift in Sources */,
 				3F50BB772AEE008F0059DE62 /* Flashcard.swift in Sources */,
 				3F50BB732AEE007A0059DE62 /* FlashcardViewModel.swift in Sources */,
+				3F50BB812AEE19710059DE62 /* FavoritesFlashcardListPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
