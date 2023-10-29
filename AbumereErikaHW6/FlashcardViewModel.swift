@@ -27,9 +27,9 @@ class FlashcardViewModel: FlashcardsModel, ObservableObject {
     private var flashcardsFilePath: URL;
     init(){
         self.flashcards = [Flashcard(id: UUID(), question: "What is the best University in California?", answer: "USC", isFavorite: false),
-                       Flashcard(id: UUID(), question: "What is the best programming language?", answer: "Swift", isFavorite: true),
+                       Flashcard(id: UUID(), question: "What is the best programming language?", answer: "Swift", isFavorite: false),
                        Flashcard(id: UUID(), question: "What is the best class at USC?", answer: "ITP 342", isFavorite: false),
-                       Flashcard(id: UUID(), question: "Who is the president of USC?", answer: "Carol Folt", isFavorite: true),
+                       Flashcard(id: UUID(), question: "Who is the president of USC?", answer: "Carol Folt", isFavorite: false),
                        Flashcard(id: UUID(), question: "What UI Framework are we learning?", answer: "SwiftUI", isFavorite: false)
         
         ]
