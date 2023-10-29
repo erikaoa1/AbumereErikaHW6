@@ -28,7 +28,6 @@ struct EditFlashCardPage: View {
             _question = State(initialValue: flashcard.question)
             _answer = State(initialValue: flashcard.answer)
             _isFavorite = State(initialValue: flashcard.isFavorite)
-            
         }
     }
     
@@ -38,7 +37,7 @@ struct EditFlashCardPage: View {
                 if flashcard == flashcardViewModel.flashcards[index] {
                     let newFlashcard = Flashcard(id: flashcardViewModel.flashcards[index].id, question: question, answer: answer, isFavorite: isFavorite)
                     
-                    flashcardViewModel.flashcards[index] = newFlashcard
+                    flashcardViewModel.update(flashcard: newFlashcard, at: index)
                     
                 }
             }
