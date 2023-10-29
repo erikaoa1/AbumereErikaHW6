@@ -18,6 +18,8 @@
 		3F50BB772AEE008F0059DE62 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB762AEE008F0059DE62 /* Flashcard.swift */; };
 		3F50BB792AEE00990059DE62 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB782AEE00990059DE62 /* ContentView.swift */; };
 		3F50BB7B2AEE01A90059DE62 /* EditFlashCardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB7A2AEE01A90059DE62 /* EditFlashCardPage.swift */; };
+		3F50BB7D2AEE047D0059DE62 /* FlashcardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB7C2AEE047D0059DE62 /* FlashcardCell.swift */; };
+		3F50BB7F2AEE054A0059DE62 /* FlashcardListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB7E2AEE054A0059DE62 /* FlashcardListPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		3F50BB762AEE008F0059DE62 /* Flashcard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
 		3F50BB782AEE00990059DE62 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3F50BB7A2AEE01A90059DE62 /* EditFlashCardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFlashCardPage.swift; sourceTree = "<group>"; };
+		3F50BB7C2AEE047D0059DE62 /* FlashcardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardCell.swift; sourceTree = "<group>"; };
+		3F50BB7E2AEE054A0059DE62 /* FlashcardListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,9 @@
 				3F50BAD22AEB92550059DE62 /* AbumereErikaHW6App.swift */,
 				3F50BB742AEE00850059DE62 /* FlashcardsModel.swift */,
 				3F50BB722AEE007A0059DE62 /* FlashcardViewModel.swift */,
+				3F50BB7E2AEE054A0059DE62 /* FlashcardListPage.swift */,
 				3F50BB7A2AEE01A90059DE62 /* EditFlashCardPage.swift */,
+				3F50BB7C2AEE047D0059DE62 /* FlashcardCell.swift */,
 				3F50BAD62AEB92570059DE62 /* Assets.xcassets */,
 				3F50BAD82AEB92570059DE62 /* Preview Content */,
 			);
@@ -269,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F50BB7D2AEE047D0059DE62 /* FlashcardCell.swift in Sources */,
 				3F50BAD32AEB92550059DE62 /* AbumereErikaHW6App.swift in Sources */,
 				3F50BB792AEE00990059DE62 /* ContentView.swift in Sources */,
+				3F50BB7F2AEE054A0059DE62 /* FlashcardListPage.swift in Sources */,
 				3F50BB752AEE00860059DE62 /* FlashcardsModel.swift in Sources */,
 				3F50BB7B2AEE01A90059DE62 /* EditFlashCardPage.swift in Sources */,
 				3F50BB772AEE008F0059DE62 /* Flashcard.swift in Sources */,

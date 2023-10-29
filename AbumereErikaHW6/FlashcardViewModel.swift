@@ -7,7 +7,7 @@
 
 import Foundation
 class FlashcardViewModel: FlashcardsModel, ObservableObject {
-    private var flashcards: [Flashcard] = [] {
+     var flashcards: [Flashcard] = [] {
         didSet {
             // Whenever flashcards array is changed, invoke the save method
             save()

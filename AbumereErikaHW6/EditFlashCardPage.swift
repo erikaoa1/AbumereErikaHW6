@@ -5,35 +5,38 @@
 //  Created by Student on 10/28/23.
 //
 
+import Foundation
 import SwiftUI
 struct EditFlashCardPage: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var flashcardViewModel: FlashcardViewModel
     
     
+    private var flashcard: Flashcard?
+    
     @State private var question = ""
     @State private var answer = ""
     
     @State private var isFavorite = false
-    
-    private var flashcard: Flashcard?
+    var opperation : String = ""
+
     init(flashcard: Flashcard? = nil) {
-        self.flashcard = flashcard
         
         if let flashcard = flashcard {
+            self.flashcard = flashcard
             _question = State(initialValue: flashcard.question)
             _answer = State(initialValue: flashcard.answer)
             _isFavorite = State(initialValue: flashcard.isFavorite)
         }
     }
     
-    
     func saveOrCreate(){
         if let flashcard = flashcard{
-            flashcardViewModel.update(flashcard: flashcard, at: flashcardViewModel.currentIndex)
-        
-            for card in flashcardViewModel.flashcards{
-                
+
+            for index in 0..<flashcardViewModel.flashcards.count{
+                if flashcard == flashcardViewModel.flashcards[index] {
+                    flashcardViewModel.flashcards[index] = flashcard
+                }
             }
         } else {
             let newFlashcard = Flashcard(id: UUID(), question: question, answer: answer, isFavorite: isFavorite)
@@ -42,6 +45,8 @@ struct EditFlashCardPage: View {
     }
 
     
+    
+
     var body: some View {
         VStack(spacing: 24){
             TextField(
@@ -60,16 +65,18 @@ struct EditFlashCardPage: View {
         .padding()
         .navigationTitle(flashcard == nil ? "New Card" : "Edit Card")
         .toolbar{
-            Button(action: saveOrCreate){
-                Text("Save")
+            Button("Save") {
+                saveOrCreate()
+                dismiss()
             }
+            .disabled(question.isEmpty || answer.isEmpty)
         }
   
     }
 }
+
 struct EditFlashCardPage_Previews: PreviewProvider {
     static var previews: some View {
         EditFlashCardPage()
-            .environmentObject(FlashcardViewModel())
     }
 }
