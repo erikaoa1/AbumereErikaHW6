@@ -82,5 +82,6 @@ struct EditFlashCardPage: View {
 struct EditFlashCardPage_Previews: PreviewProvider {
     static var previews: some View {
         EditFlashCardPage()
+        
     }
 }

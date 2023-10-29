@@ -50,6 +50,7 @@ struct FlashcardPage: View {
             offsetY = 0.0
             isHidden = false
         }
+        fav = isFavorite
     }
     
     func toggleQuestionAnswer() {
@@ -72,6 +73,7 @@ struct FlashcardPage: View {
             offsetX = 0.0
             isHidden = false
         }
+        fav = isFavorite
     }
     
     
@@ -89,20 +91,25 @@ struct FlashcardPage: View {
             offsetX = 0.0
             isHidden = false
         }
-
+        fav = isFavorite
     }
     
-
     
-
     
-    @State private var fav = false
+    
+    
+    
     
     var isFavorite : Bool{
         return flashcardViewModel.currentFlashcard?.isFavorite == true
     }
     
+    @State private var fav = false
 
+    func favQ(){
+        flashcardViewModel.toggleFavorite()
+        fav = isFavorite
+    }
     
     var body: some View {
         
@@ -111,15 +118,13 @@ struct FlashcardPage: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        print("\(flashcardViewModel.currentFlashcard?.question) is \(flashcardViewModel.currentFlashcard?.isFavorite)")
-                        flashcardViewModel.toggleFavorite()
-                        print("\(flashcardViewModel.currentFlashcard?.question) is \(flashcardViewModel.currentFlashcard?.isFavorite)")
+                        favQ()
                     }) {
                         Image(systemName:"star.fill")
                             .font(.system(size: 30))
                             .padding()
                     }
-                    .tint(isFavorite ? .yellow : .gray)
+                    .tint(fav ? .yellow : .gray)
                 }
                 .padding()
                 
