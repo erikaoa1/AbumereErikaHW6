@@ -8,9 +8,8 @@
 import Foundation
 class FlashcardViewModel: FlashcardsModel, ObservableObject {
     
-    @Published var shouldRefresh = false
     
-      var flashcards: [Flashcard] = [] {
+    @Published var flashcards: [Flashcard] = [] {
         didSet {
             // Whenever flashcards array is changed, invoke the save method
             save()

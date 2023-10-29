@@ -11,6 +11,7 @@ struct EditFlashCardPage: View {
     @Environment(\.dismiss) private var dismiss
     @EnvironmentObject var flashcardViewModel: FlashcardViewModel
     
+  
     
     private var flashcard: Flashcard?
     
@@ -27,6 +28,7 @@ struct EditFlashCardPage: View {
             _question = State(initialValue: flashcard.question)
             _answer = State(initialValue: flashcard.answer)
             _isFavorite = State(initialValue: flashcard.isFavorite)
+            
         }
     }
     
@@ -37,13 +39,14 @@ struct EditFlashCardPage: View {
                     let newFlashcard = Flashcard(id: flashcardViewModel.flashcards[index].id, question: question, answer: answer, isFavorite: isFavorite)
                     
                     flashcardViewModel.flashcards[index] = newFlashcard
+                    
                 }
             }
         } else {
             let newFlashcard = Flashcard(id: UUID(), question: question, answer: answer, isFavorite: isFavorite)
             flashcardViewModel.append(flashcard: newFlashcard)
         }
-        flashcardViewModel.shouldRefresh.toggle()
+        refresh = true
     }
 
     
@@ -69,6 +72,7 @@ struct EditFlashCardPage: View {
         .toolbar{
             Button("Save") {
                 saveOrCreate()
+                
                 dismiss()
             }
             .disabled(question.isEmpty || answer.isEmpty)
