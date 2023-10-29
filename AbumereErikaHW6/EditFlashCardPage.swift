@@ -2,7 +2,7 @@
 //  EditFlashCardPage.swift
 //  AbumereErikaHW6
 //
-//  Created by Student on 10/28/23.
+//  
 //
 
 import Foundation
@@ -32,7 +32,6 @@ struct EditFlashCardPage: View {
     
     func saveOrCreate(){
         if let flashcard = flashcard{
-
             for index in 0..<flashcardViewModel.flashcards.count{
                 if flashcard == flashcardViewModel.flashcards[index] {
                     flashcardViewModel.flashcards[index] = flashcard

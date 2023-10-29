@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  AbumereErikaHW5
 //
-//  Created by Student on 10/9/23.
+//  
 //
 
 import SwiftUI

@@ -21,6 +21,7 @@
 		3F50BB7D2AEE047D0059DE62 /* FlashcardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB7C2AEE047D0059DE62 /* FlashcardCell.swift */; };
 		3F50BB7F2AEE054A0059DE62 /* FlashcardListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB7E2AEE054A0059DE62 /* FlashcardListPage.swift */; };
 		3F50BB812AEE19710059DE62 /* FavoritesFlashcardListPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB802AEE19710059DE62 /* FavoritesFlashcardListPage.swift */; };
+		3F50BB832AEE1B700059DE62 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F50BB822AEE1B700059DE62 /* MainTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		3F50BB7C2AEE047D0059DE62 /* FlashcardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardCell.swift; sourceTree = "<group>"; };
 		3F50BB7E2AEE054A0059DE62 /* FlashcardListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardListPage.swift; sourceTree = "<group>"; };
 		3F50BB802AEE19710059DE62 /* FavoritesFlashcardListPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesFlashcardListPage.swift; sourceTree = "<group>"; };
+		3F50BB822AEE1B700059DE62 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				3F50BB782AEE00990059DE62 /* ContentView.swift */,
+				3F50BB822AEE1B700059DE62 /* MainTabView.swift */,
 				3F50BB762AEE008F0059DE62 /* Flashcard.swift */,
 				3F50BAD22AEB92550059DE62 /* AbumereErikaHW6App.swift */,
 				3F50BB742AEE00850059DE62 /* FlashcardsModel.swift */,
@@ -287,6 +290,7 @@
 				3F50BB772AEE008F0059DE62 /* Flashcard.swift in Sources */,
 				3F50BB732AEE007A0059DE62 /* FlashcardViewModel.swift in Sources */,
 				3F50BB812AEE19710059DE62 /* FavoritesFlashcardListPage.swift in Sources */,
+				3F50BB832AEE1B700059DE62 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
