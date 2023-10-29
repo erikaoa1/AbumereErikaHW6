@@ -28,6 +28,10 @@ struct FlashcardListPage: View {
                    }
                }
            }
+           .onReceive(flashcardViewModel.$shouldRefresh) { _ in
+               refresh.toggle()
+           }
+           .id(refresh)
        }
    }
 }

@@ -43,7 +43,7 @@ struct EditFlashCardPage: View {
             let newFlashcard = Flashcard(id: UUID(), question: question, answer: answer, isFavorite: isFavorite)
             flashcardViewModel.append(flashcard: newFlashcard)
         }
-        refresh = true
+        flashcardViewModel.shouldRefresh.toggle()
     }
 
     
