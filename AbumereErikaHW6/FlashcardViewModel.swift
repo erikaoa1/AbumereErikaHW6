@@ -78,6 +78,7 @@ class FlashcardViewModel: FlashcardsModel, ObservableObject {
     
     // Returns the number of flashcards in your flashcards array
     var numberOfFlashcards: Int { return flashcards.count }
+    
     // Returns the current flashcard indicated by your currentIndex
     var currentFlashcard: Flashcard? {
         if flashcards.count == 0 {
@@ -132,6 +133,7 @@ class FlashcardViewModel: FlashcardsModel, ObservableObject {
     func append(flashcard: Flashcard){
         flashcards.append(flashcard)
     }
+    
     // Initializes a flashcard at specific index of your flashcards array
     func insert(flashcard: Flashcard, at index: Int){
         if index < 0 || index >= flashcards.count {
