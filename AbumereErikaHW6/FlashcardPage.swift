@@ -12,7 +12,7 @@ struct FlashcardPage: View {
     let OFFSET_X = 500.0
     let OFFSET_Y = 900.0
     
-    @ObservedObject var flashcardViewModel = FlashcardViewModel()
+    @EnvironmentObject var flashcardViewModel: FlashcardViewModel
     @State var isShowingQuestion = true
     
     @State var offsetX = 0.0

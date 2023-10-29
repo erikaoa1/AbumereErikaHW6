@@ -18,12 +18,10 @@ struct EditFlashCardPage: View {
     @State private var answer = ""
     
     @State private var isFavorite = false
-    var opperation : String = ""
     
     @State private var refresh = false
 
     init(flashcard: Flashcard? = nil) {
-        
         if let flashcard = flashcard {
             self.flashcard = flashcard
             _question = State(initialValue: flashcard.question)

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct MainTabView: View {
-    @StateObject var flashcardViewModel = FlashcardViewModel()
+    @EnvironmentObject var flashcardViewModel: FlashcardViewModel
 
     var body: some View {
         TabView{
@@ -34,5 +34,6 @@ struct MainTabView: View {
 struct MainTabView_Previews: PreviewProvider {
     static var previews: some View {
         MainTabView()
+           
     }
 }

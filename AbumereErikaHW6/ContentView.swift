@@ -9,9 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var flashcardViewModel = FlashcardViewModel()
+    
     var body: some View {
         MainTabView()
+            .environmentObject(FlashcardViewModel())
     }
 }
 

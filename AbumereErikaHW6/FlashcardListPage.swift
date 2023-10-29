@@ -10,8 +10,7 @@ import SwiftUI
 
 struct FlashcardListPage: View {
    @EnvironmentObject var flashcardViewModel: FlashcardViewModel
-   
-    @State private var refresh = false
+   @State private var refresh = false
    var body: some View {
        NavigationStack{
            List($flashcardViewModel.flashcards, editActions: .delete) { $flashcard in
