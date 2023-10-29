@@ -12,7 +12,7 @@ struct MainTabView: View {
     @StateObject var flashcardViewModel = FlashcardViewModel()
 
     var body: some View {
-        TabView {
+        TabView{
             FlashcardPage()
                 .tabItem {
                     Label("Question", systemImage: "questionmark")

@@ -12,7 +12,7 @@ struct FlashcardPage: View {
     let OFFSET_X = 500.0
     let OFFSET_Y = 900.0
     
-    @EnvironmentObject var flashcardViewModel = FlashcardViewModel()
+    @StateObject var flashcardViewModel = FlashcardViewModel()
     @State var isShowingQuestion = true
     
     @State var offsetX = 0.0
@@ -96,24 +96,25 @@ struct FlashcardPage: View {
     
 
     
-    @State var fav = flashcardViewModel
+    @State private var fav = false
     
     
     var isFavorite : Bool{
+        fav = true
        return flashcardViewModel.currentFlashcard?.isFavorite == true
    }
     
 
     
     var body: some View {
+        
         ZStack{
             VStack {
                 HStack {
                     Spacer()
                     Button(action: {
                         flashcardViewModel.toggleFavorite()
-                        fav = isFavorite
-                       
+                        fav.toggle()
                     }) {
                         Image(systemName: isFavorite ? "star.fill" : "star")
                             .font(.system(size: 30))

@@ -19,6 +19,8 @@ struct EditFlashCardPage: View {
     
     @State private var isFavorite = false
     var opperation : String = ""
+    
+    @State private var refresh = false
 
     init(flashcard: Flashcard? = nil) {
         
@@ -34,13 +36,16 @@ struct EditFlashCardPage: View {
         if let flashcard = flashcard{
             for index in 0..<flashcardViewModel.flashcards.count{
                 if flashcard == flashcardViewModel.flashcards[index] {
-                    flashcardViewModel.flashcards[index] = flashcard
+                    let newFlashcard = Flashcard(id: flashcardViewModel.flashcards[index].id, question: question, answer: answer, isFavorite: isFavorite)
+                    
+                    flashcardViewModel.flashcards[index] = newFlashcard
                 }
             }
         } else {
             let newFlashcard = Flashcard(id: UUID(), question: question, answer: answer, isFavorite: isFavorite)
             flashcardViewModel.append(flashcard: newFlashcard)
         }
+        refresh = true
     }
 
     
