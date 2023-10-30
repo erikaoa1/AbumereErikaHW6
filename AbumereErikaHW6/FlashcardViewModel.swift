@@ -101,7 +101,12 @@ class FlashcardViewModel: FlashcardsModel, ObservableObject {
     }
     // Randomizes the currentIndex
     func randomize(){
-        currentIndex = Int.random(in: 0..<flashcards.count)
+        if flashcards.count == 0 {
+            
+        }
+        else {
+            currentIndex = Int.random(in: 0..<flashcards.count)
+        }
     }
     // Set currentIndex to be next
         // if currentIndex reaches the end of array

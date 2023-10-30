@@ -21,10 +21,4 @@ struct FlashcardCell: View {
     }
 }
 
-struct FlashcardCell_Previews: PreviewProvider {
-    static var previews: some View {
-        let sampleFlashcard = Flashcard(id: UUID(), question: "Sample Question", answer: "Sample Answer", isFavorite: false)
-        FlashcardCell(flashcard: sampleFlashcard)
 
-    }
-}

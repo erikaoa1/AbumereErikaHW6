@@ -71,7 +71,6 @@ struct EditFlashCardPage: View {
         .toolbar{
             Button("Save") {
                 saveOrCreate()
-                
                 dismiss()
                 
             }
