@@ -83,7 +83,7 @@ class FlashcardViewModel: FlashcardsModel, ObservableObject {
     
     // Returns the current flashcard indicated by your currentIndex
     var currentFlashcard: Flashcard? {
-        if flashcards.count == 0 {
+        if flashcards.count == 0 || currentIndex < 0 || currentIndex >= flashcards.count {
             return nil
         } else {
             return flashcards[currentIndex] }
@@ -165,7 +165,8 @@ class FlashcardViewModel: FlashcardsModel, ObservableObject {
     }
     // Updates a flashcard at a specific index
     func update(flashcard: Flashcard, at index: Int){
-        flashcards[index] = flashcard
+        var flashcardd = flashcards[index]
+        flashcardd = flashcard
     }
     
     // Toggles the favorite attribute of your flashcard

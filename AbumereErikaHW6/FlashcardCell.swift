@@ -2,7 +2,7 @@
 //  FlashcardCell.swift
 //  AbumereErikaHW6
 //
-//  
+// 
 //
 
 import Foundation

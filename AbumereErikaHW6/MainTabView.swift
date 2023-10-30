@@ -2,15 +2,15 @@
 //  MainTabView.swift
 //  AbumereErikaHW6
 //
-//  Created by Student on 10/28/23.
+//  
 //
 
 import Foundation
 import SwiftUI
 
 struct MainTabView: View {
-    //@EnvironmentObject var flashcardViewModel: FlashcardViewModel
-
+    @StateObject var flashcardViewModel = FlashcardViewModel()
+    
     var body: some View {
         TabView{
             FlashcardPage()
@@ -26,14 +26,8 @@ struct MainTabView: View {
                     Label("Favorites", systemImage: "star.fill")
                 }
         }
-        .environmentObject(FlashcardViewModel())
+        .environmentObject(flashcardViewModel)
         
     }
 }
 
-struct MainTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainTabView()
-           
-    }
-}

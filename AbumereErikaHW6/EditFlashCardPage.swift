@@ -12,16 +12,15 @@ struct EditFlashCardPage: View {
     @EnvironmentObject var flashcardViewModel: FlashcardViewModel
     
   
-    
     private var flashcard: Flashcard?
-    
+
     @State private var question = ""
     @State private var answer = ""
     
     @State private var isFavorite = false
     
     @State private var refresh = false
-
+    
     init(flashcard: Flashcard? = nil) {
         if let flashcard = flashcard {
             self.flashcard = flashcard
@@ -29,15 +28,16 @@ struct EditFlashCardPage: View {
             _answer = State(initialValue: flashcard.answer)
             _isFavorite = State(initialValue: flashcard.isFavorite)
         }
+        
     }
     
     func saveOrCreate(){
         if let flashcard = flashcard{
             for index in 0..<flashcardViewModel.flashcards.count{
                 if flashcard == flashcardViewModel.flashcards[index] {
-                    let newFlashcard = Flashcard(id: flashcardViewModel.flashcards[index].id, question: question, answer: answer, isFavorite: isFavorite)
+                    let newFlashcard = Flashcard(id: flashcard.id, question: question, answer: answer, isFavorite: isFavorite)
                     
-                    flashcardViewModel.update(flashcard: newFlashcard, at: index)
+                    flashcardViewModel.flashcards[index] = newFlashcard
                     
                 }
             }
@@ -45,7 +45,7 @@ struct EditFlashCardPage: View {
             let newFlashcard = Flashcard(id: UUID(), question: question, answer: answer, isFavorite: isFavorite)
             flashcardViewModel.append(flashcard: newFlashcard)
         }
-        refresh = true
+        
     }
 
     
@@ -73,6 +73,7 @@ struct EditFlashCardPage: View {
                 saveOrCreate()
                 
                 dismiss()
+                
             }
             .disabled(question.isEmpty || answer.isEmpty)
         }
